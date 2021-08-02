@@ -9,16 +9,17 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <Container>
+    <Container data-testid="homePage">
       {!loading ? (
         <>
           <Header>
-            <Title>
+            <Title title="Welcome to iClinic">
               Welcome to <strong>iClinic</strong>
             </Title>
             <SubTitle>FRONTEND CHALLENGE</SubTitle>
           </Header>
           <Button
+            data-testid="btnStart"
             disabled={loading}
             onClick={() => handleStart({ history, setLoading })}
           >

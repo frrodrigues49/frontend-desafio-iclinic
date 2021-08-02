@@ -30,6 +30,14 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/**/__stories__/",
+      "!<rootDir>/node_modules/"
+    ]    
+  },
   "browserslist": {
     "production": [
       ">0.2%",
