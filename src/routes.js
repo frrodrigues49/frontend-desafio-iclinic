@@ -10,7 +10,7 @@ const Routes = () => (
     <Switch>
       {/* ROUTE SIGN IN */}
       <Route exact path="/" component={Home} />
-      <Route path="/theme" component={Theme} />
+      <Route path="/theme/:name" component={Theme} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
   </BrowserRouter>

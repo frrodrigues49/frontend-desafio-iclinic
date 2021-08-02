@@ -7,7 +7,7 @@ function HeaderGoBack({ color }) {
   const history = useHistory();
 
   return (
-    <Container onClick={() => history.goBack()}>
+    <Container onClick={() => history.push("/")}>
       <ArrowBack color={color} />
       <Title color={color}>back</Title>
     </Container>
