@@ -1,21 +1,18 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
 import { Container, ArrowBack, Title } from "./styles";
 
 function HeaderGoBack({ color }) {
   const history = useHistory();
 
   return (
-    <Container onClick={() => history.push("/")}>
-      <ArrowBack color={color} />
-      <Title color={color}>back</Title>
+    <Container data-testid="goback" onClick={() => history.push("/")}>
+      <ArrowBack data-testid="avatar" bgcolor={color} />
+      <Title data-testid="text" color={color}>
+        back
+      </Title>
     </Container>
   );
 }
-
-HeaderGoBack.propTypes = {
-  color: PropTypes.string.isRequired,
-};
 
 export default HeaderGoBack;

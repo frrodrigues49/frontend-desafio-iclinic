@@ -12,8 +12,9 @@ export default function Web({ handleStart, themeName }) {
 
   return (
     <>
-      <ContainerProfile>
+      <ContainerProfile data-testid="web">
         <ChooseAgain
+          data-testid="btnStart"
           bgcolor={themeName.theme === "dark" ? colors.white : colors.dark}
           color={
             themeName.theme === "dark" ? colors.dark : colors.backgroundLight
@@ -25,6 +26,7 @@ export default function Web({ handleStart, themeName }) {
         </ChooseAgain>
         <Avatar src={themeName.theme === "dark" ? Darth : Luk} />
         <YourMaster
+          title="Your master is Luck"
           color={themeName.theme === "dark" ? colors.white : colors.dark}
         >
           Your master is <strong>{themeName.name}</strong>

@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const ArrowBack = styled(ArrowBackIcon)`
-  color: ${(props) => props.color};
+  color: ${(props) => props.bgcolor};
 `;
 
 export const Title = styled.span`

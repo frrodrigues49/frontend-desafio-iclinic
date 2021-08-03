@@ -7,10 +7,13 @@ import Mobile from "./mobile";
 import { handleStart } from "../../utils";
 
 export default function Theme() {
-  const themeName = JSON.parse(localStorage.getItem("THEME"));
+  const themeName = JSON.parse(localStorage.getItem("THEME")) || {
+    theme: "dark",
+  };
 
   return (
     <Container
+      data-testid="themePage"
       color={
         themeName.theme === "dark"
           ? colors.backgroundDark
